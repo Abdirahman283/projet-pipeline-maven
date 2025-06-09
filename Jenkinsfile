@@ -40,9 +40,9 @@ pipeline {
       }
     }
 	stage('Analyse') {
-      steps {
-        sh 'mvn checkstyle:checkstyle'
-        publishHTML([reportDir: 'target/site', reportFiles: 'checkstyle.html', reportName: 'Checkstyle'])
+          steps {
+            sh 'mvn checkstyle:checkstyle'
+            publishHTML([reportDir: 'target/site', reportFiles: 'checkstyle.html', reportName: 'Checkstyle'])
       }
     }
   }
